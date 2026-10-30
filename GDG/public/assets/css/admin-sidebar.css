@@ -1,0 +1,191 @@
+/* sidebar styles: split by UI responsibility. */
+.sidebar {
+    position: fixed;
+    z-index: 5;
+    inset: 0 auto 0 0;
+    display: flex;
+    width: 232px;
+    flex-direction: column;
+    color: #fff;
+    background: linear-gradient(180deg, #11176a 0%, #11165f 52%, #11152f 100%);
+    border-right: 1px solid rgb(255 255 255 / 10%);
+}
+
+.brand {
+    display: flex;
+    min-height: 72px;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 19px;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgb(255 255 255 / 13%);
+}
+
+.brand-mark {
+    display: block;
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    object-fit: contain;
+}
+
+.brand-copy,
+.account-copy {
+    display: grid;
+    min-width: 0;
+    gap: 2px;
+}
+
+.brand-copy strong {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.brand-copy span,
+.account-copy span {
+    color: #d3d8fa;
+    font-size: 11px;
+    line-height: 1.35;
+}
+
+.primary-nav {
+    display: grid;
+    gap: 3px;
+    padding: 14px 11px;
+}
+
+.nav-link {
+    display: flex;
+    width: 100%;
+    min-height: 38px;
+    align-items: center;
+    gap: 11px;
+    padding: 8px 11px;
+    color: #e4e7fc;
+    background: transparent;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    text-decoration: none;
+    transition: background-color 140ms ease, color 140ms ease;
+}
+
+.nav-link svg {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.6;
+}
+
+.nav-link:hover:not(.is-active) {
+    color: #fff;
+    background: rgb(255 255 255 / 8%);
+}
+
+.nav-link.is-active {
+    color: #10143d;
+    background: var(--yellow-400);
+}
+
+.sidebar-account {
+    display: flex;
+    min-height: 68px;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+    padding: 12px 18px;
+    border-top: 1px solid rgb(255 255 255 / 15%);
+}
+
+.account-avatar {
+    display: grid;
+    width: 33px;
+    height: 33px;
+    flex: 0 0 33px;
+    place-items: center;
+    color: #fff;
+    background: #263284;
+    border-radius: 50%;
+}
+
+.account-avatar svg,
+.account-exit svg {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.7;
+}
+
+.account-copy {
+    flex: 1;
+}
+
+.account-copy strong {
+    overflow: hidden;
+    font-size: 12px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.account-copy span {
+    font-size: 10px;
+}
+
+.account-exit {
+    display: grid;
+    width: 24px;
+    height: 30px;
+    flex: 0 0 24px;
+    place-items: center;
+    color: #d3d8fa;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.account-exit:hover { color: #fff; }
+.account-exit:focus-visible { outline: 2px solid var(--yellow-400); outline-offset: 2px; border-radius: 4px; }
+.sidebar-account form { display: flex; flex: 0 0 24px; margin: 0; }
+
+@media (max-width: 700px) {
+.sidebar {
+        position: sticky;
+        inset: 0 0 auto;
+        width: 100%;
+        min-height: 0;
+        background: var(--navy-900);
+        border-right: 0;
+        border-bottom: 1px solid rgb(255 255 255 / 12%);
+    }
+.brand {
+        min-height: 62px;
+        padding: 10px 16px;
+    }
+.primary-nav {
+        display: flex;
+        gap: 8px;
+        padding: 0 12px 10px;
+    }
+.nav-link {
+        width: auto;
+        min-height: 36px;
+        padding: 7px 12px;
+    }
+.sidebar-account {
+        display: none;
+    }
+}

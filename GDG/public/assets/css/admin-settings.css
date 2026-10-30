@@ -1,0 +1,163 @@
+.settings-wrap {
+    width: min(100%, 633px);
+    margin: 2px auto 0;
+}
+
+.settings-heading { margin: 0 0 20px; }
+.settings-heading h1 { margin: 0 0 4px; color: var(--text); font-size: 22px; font-weight: 750; letter-spacing: -.02em; }
+.settings-heading p { margin: 0; color: var(--muted); font-size: 13px; }
+
+.settings-card {
+    margin-bottom: 15px;
+    padding: 18px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: var(--shadow-card);
+}
+
+.account-card { display: flex; align-items: flex-start; gap: 13px; }
+.settings-account-icon {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    place-items: center;
+    color: var(--navy-900);
+    background: #e8eaf4;
+    border-radius: 50%;
+}
+.settings-account-icon svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.7; }
+.settings-account-copy { display: grid; min-width: 0; gap: 3px; }
+.settings-account-copy strong { color: var(--text); font-size: 14px; font-weight: 700; }
+.settings-account-copy > span { color: var(--muted); font-size: 12px; }
+.settings-account-copy .settings-account-email { display: flex; align-items: center; gap: 7px; margin-top: 7px; overflow-wrap: anywhere; }
+.settings-account-email svg { width: 15px; height: 15px; flex: 0 0 15px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.6; }
+
+.settings-card h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 4px;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 700;
+}
+.settings-card h2 svg { width: 16px; height: 16px; flex: 0 0 16px; fill: none; stroke: var(--navy-900); stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.7; }
+.settings-card > p { margin: 0 0 12px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+
+.settings-button {
+    display: inline-flex;
+    min-height: 34px;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 0 13px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 650;
+    cursor: pointer;
+}
+.settings-button:focus-visible { outline: 3px solid #7164e8; outline-offset: 2px; }
+.settings-button:disabled { opacity: .65; cursor: wait; }
+.settings-button-secondary { color: var(--navy-900); background: #fff; border-color: var(--line); box-shadow: 0 1px 2px rgb(16 24 40 / 5%); }
+.settings-button-secondary:hover:not(:disabled) { background: #f7f8fb; }
+.settings-button-danger { color: #9f2520; background: #fff; border-color: #efc4c1; }
+.settings-button-danger:hover:not(:disabled) { background: #fff1f0; }
+.settings-button-primary { color: #fff; background: #7778b4; }
+.settings-button-primary:hover:not(:disabled) { background: var(--navy-800); }
+.settings-button svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.7; }
+
+.settings-invite-form { display: grid; grid-template-columns: minmax(0, 1fr) 128px auto; gap: 8px; }
+.settings-invite-form input,
+.settings-invite-form select,
+.password-form > input,
+.password-form .settings-password-control input,
+.settings-invite-link input {
+    width: 100%;
+    min-width: 0;
+    min-height: 36px;
+    padding: 7px 11px;
+    color: var(--text);
+    background: #f5f6f8;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font: inherit;
+    font-size: 12px;
+}
+.settings-invite-form input::placeholder { color: #8a94aa; }
+.settings-feedback { margin: 10px 0 0; padding: 9px 11px; color: #17613d; background: #edf8f1; border: 1px solid #b9e3c8; border-radius: 8px; font-size: 12px; line-height: 1.45; }
+.settings-feedback.is-error { color: #9f2520; background: #fff1f0; border-color: #f0c2bf; }
+.settings-feedback[hidden] { display: none; }
+.settings-invite-link { display: grid; gap: 6px; margin-top: 11px; }
+.settings-invite-link[hidden] { display: none; }
+.settings-invite-link > label { color: var(--muted); font-size: 11px; font-weight: 600; }
+.settings-invite-link > div { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 7px; }
+.settings-invite-link input { background: #fff; }
+
+.team-accounts-card { padding: 0; overflow: hidden; }
+.team-accounts-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: 18px 18px 12px; }
+.team-accounts-heading h2 { margin-bottom: 4px; }
+.team-accounts-heading p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.45; }
+.team-accounts-heading .settings-button { flex: 0 0 auto; }
+.team-accounts-table-wrap { width: 100%; overflow-x: auto; border-top: 1px solid var(--line); }
+.team-accounts-table { width: 100%; min-width: 610px; border-collapse: collapse; text-align: left; }
+.team-accounts-table th { padding: 10px 12px; color: #59647d; background: #f5f6f8; font-size: 10px; font-weight: 700; letter-spacing: .035em; text-transform: uppercase; }
+.team-accounts-table td { padding: 11px 12px; border-top: 1px solid var(--line); color: var(--text); font-size: 12px; vertical-align: middle; }
+.team-accounts-table tbody tr:first-child td { border-top: 0; }
+.team-account-identity { min-width: 180px; }
+.team-account-identity strong,
+.team-account-identity span { display: block; overflow-wrap: anywhere; }
+.team-account-identity strong { font-size: 12px; font-weight: 700; }
+.team-account-identity span { margin-top: 3px; color: var(--muted); font-size: 11px; }
+.team-account-status { white-space: nowrap; font-size: 11px !important; font-weight: 650; }
+.team-account-status.status-active { color: #16834c; }
+.team-account-status.status-pending { color: #8a6500; }
+.team-account-status.status-expired,
+.team-account-status.status-disabled { color: #66708a; }
+.team-account-actions { display: flex; gap: 6px; white-space: nowrap; }
+.team-account-actions .settings-button { min-height: 30px; padding: 0 9px; font-size: 11px; }
+.team-account-self { color: var(--muted); font-size: 11px; }
+.team-accounts-state { padding: 24px !important; color: var(--muted) !important; text-align: center; }
+.team-accounts-state.is-error { color: #9f2520 !important; }
+.team-accounts-card > .settings-feedback { margin: 0 18px 12px; }
+.team-accounts-card > .settings-invite-link { margin: 12px 18px 18px; }
+
+.settings-about { margin-top: 14px; padding: 17px 18px; color: var(--navy-900); background: #f8f5e9; border: 1px solid #f0dfa5; border-radius: 11px; }
+.settings-about h2 { margin: 0 0 5px; font-size: 13px; font-weight: 700; }
+.settings-about p { margin: 0; font-size: 12px; line-height: 1.55; }
+
+.password-dialog { width: min(100% - 32px, 430px); padding: 0; color: var(--text); background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 24px 72px rgb(16 24 40 / 24%); }
+.password-dialog::backdrop { background: rgb(13 18 46 / 52%); }
+.password-form { display: grid; gap: 8px; padding: 22px; }
+.password-dialog-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 5px; }
+.password-dialog-heading h2 { margin: 0; font-size: 18px; }
+.password-dialog-heading p { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
+.password-dialog-close { width: 30px; height: 30px; color: var(--muted); background: transparent; border: 0; border-radius: 7px; font-size: 22px; cursor: pointer; }
+.password-form > label { margin-top: 4px; color: #35405b; font-size: 12px; font-weight: 600; }
+.password-form > input { background: #fff; }
+.settings-password-control { position: relative; display: block; }
+.settings-password-control input { padding-right: 62px; background: #fff; }
+.settings-password-toggle { position: absolute; top: 50%; right: 8px; display: inline-grid; width: 34px; height: 34px; padding: 6px; place-items: center; transform: translateY(-50%); color: var(--navy-900); background: transparent; border: 0; cursor: pointer; }
+.settings-password-toggle svg { display: block; width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.7; }
+.settings-password-toggle:focus-visible { outline: 3px solid #7c83d1; outline-offset: 2px; border-radius: 3px; }
+.settings-dialog-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 8px; }
+
+@media (max-width: 700px) {
+    .settings-wrap { margin-top: 0; }
+    .settings-invite-form { grid-template-columns: minmax(0, 1fr) 105px; }
+    .settings-invite-form .settings-button { grid-column: 1 / -1; }
+}
+
+@media (max-width: 430px) {
+    .settings-card { padding: 15px; }
+    .team-accounts-card { padding: 0; }
+    .team-accounts-heading { padding: 15px 15px 11px; }
+    .settings-invite-form { grid-template-columns: 1fr; }
+    .settings-invite-form .settings-button { grid-column: auto; }
+    .settings-invite-link > div { grid-template-columns: 1fr; }
+    .team-accounts-heading { align-items: flex-start; }
+    .team-accounts-heading .settings-button { min-height: 30px; padding: 0 9px; }
+}

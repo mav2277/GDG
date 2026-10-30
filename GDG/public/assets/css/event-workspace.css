@@ -1,0 +1,211 @@
+/* workspace styles: split by UI responsibility. */
+.workspace-view[hidden],
+.workspace-panel[hidden] {
+    display: none !important;
+}
+
+.workspace-tab:focus-visible,
+.workspace-back:focus-visible {
+    outline: 3px solid #7164e8;
+    outline-offset: 2px;
+}
+
+.workspace-wrap {
+    width: min(100%, 864px);
+    margin: 2px auto 0;
+}
+
+.workspace-back {
+    display: inline-flex;
+    min-height: 28px;
+    align-items: center;
+    gap: 7px;
+    margin: 0 0 13px;
+    padding: 0;
+    color: #243b9b;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.workspace-back:hover {
+    color: #142778;
+    text-decoration: underline;
+}
+
+.workspace-back svg {
+    width: 15px;
+    height: 15px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+}
+
+.workspace-event-header {
+    min-height: 126px;
+    padding: 18px 22px;
+    color: #fff;
+    background: linear-gradient(115deg, #11165f 0%, #121746 72%, #12152e 100%);
+    border: 1px solid rgb(255 255 255 / 20%);
+    border-radius: var(--radius-dashboard-hero);
+    box-shadow: 0 7px 18px rgb(14 22 73 / 8%);
+}
+
+.workspace-event-label {
+    display: inline-flex;
+    min-height: 19px;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 2px 9px;
+    color: var(--navy-900);
+    background: var(--yellow-400);
+    border-radius: 999px;
+    font-size: 9px;
+    font-weight: 750;
+    letter-spacing: .06em;
+}
+
+.workspace-event-header h1 {
+    margin: 0 0 9px;
+    color: #fff;
+    font-size: 23px;
+    font-weight: 750;
+    letter-spacing: -.025em;
+    line-height: 1.2;
+}
+
+.workspace-event-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    color: #fff;
+    font-size: 11px;
+}
+
+.workspace-event-meta > span {
+    display: inline-flex;
+    min-height: 24px;
+    align-items: center;
+    gap: 7px;
+}
+
+.workspace-event-meta > span[hidden] {
+    display: none !important;
+}
+
+.workspace-meta-chip {
+    padding: 3px 10px;
+    background: rgb(255 255 255 / 13%);
+    border: 1px solid rgb(255 255 255 / 8%);
+    border-radius: 999px;
+}
+
+.workspace-event-meta svg {
+    width: 14px;
+    height: 14px;
+    flex: 0 0 14px;
+    fill: none;
+    stroke: #79a7ff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.7;
+}
+
+.workspace-tabs {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4px;
+    margin: 20px 0 14px;
+    padding: 4px;
+    background: #e5e6ea;
+    border-radius: 11px;
+}
+
+.workspace-tab {
+    min-height: 32px;
+    padding: 6px 10px;
+    color: #4c5572;
+    background: transparent;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.workspace-tab:hover:not(.is-active) {
+    color: var(--navy-900);
+    background: rgb(255 255 255 / 46%);
+}
+
+.workspace-tab.is-active {
+    color: #11165f;
+    background: #fff;
+    box-shadow: 0 1px 4px rgb(20 26 60 / 12%);
+}
+
+.workspace-panel {
+    padding: 18px;
+    background: #fff;
+    border: 1px solid #d5dbe7;
+    border-radius: 12px;
+    box-shadow: var(--shadow-card);
+}
+
+.workspace-panel h2 {
+    margin: 0;
+    color: #171b32;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.workspace-helper {
+    margin: 3px 0 15px;
+    color: #68718a;
+    font-size: 11px;
+    line-height: 1.45;
+}
+
+.workspace-empty-panel {
+    min-height: 250px;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.workspace-empty-panel p {
+    max-width: 520px;
+    margin: 8px 0 0;
+    color: #68718a;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+.workspace-event-header {
+        border-radius: var(--radius-dashboard-hero);
+    }
+}
+
+@media (max-width: 430px) {
+.workspace-event-header {
+        min-height: 116px;
+        padding: 16px;
+    }
+.workspace-event-header h1 {
+        font-size: 21px;
+    }
+.workspace-tabs {
+        gap: 2px;
+        margin-top: 16px;
+        padding: 3px;
+    }
+.workspace-tab {
+        padding-right: 4px;
+        padding-left: 4px;
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,45 @@
+/* name tag print list styles: template notice and print-status table only. */
+.name-tags-panel { padding: 0; overflow: hidden; background: transparent; border: 0; box-shadow: none; }
+
+.nametag-table-wrap { overflow-x: auto; background: #fff; border: 1px solid #d5dbe7; border-radius: 11px; }
+.nametag-table { width: 100%; min-width: 620px; border-collapse: collapse; text-align: left; }
+
+.nametag-table th {
+    height: 36px;
+    padding: 0 14px;
+    color: #46516e;
+    background: #f3f4f7;
+    font-size: 10px;
+    font-weight: 650;
+    letter-spacing: .025em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.nametag-table th:last-child, .nametag-table td:last-child { text-align: right; }
+.nametag-table td { height: 41px; padding: 8px 14px; color: #19213d; border-top: 1px solid #d8deea; font-size: 12px; }
+.nametag-table td.nametag-empty { height: 180px; color: #737e96; text-align: center; vertical-align: middle; }
+.nametag-empty span { display: block; max-width: 360px; margin: 0 auto; line-height: 1.5; }
+.nametag-feedback { margin: 0 0 12px; padding: 10px 12px; color: #17613d; background: #edf8f1; border: 1px solid #b9e3c8; border-radius: 8px; font-size: 12px; }
+.nametag-feedback.is-error { color: #9f2520; background: #fff1f0; border-color: #f0c2bf; }
+.nametag-feedback[hidden] { display: none; }
+.nametag-status { white-space: nowrap; }
+.nametag-status.is-printed { color: #16834c !important; }
+.nametag-status.is-queued { color: #805600 !important; }
+.nametag-status.is-failed { color: #b42318 !important; }
+.nametag-action { min-height: 32px; padding: 0 12px; color: var(--navy-900); background: #fff; border: 1px solid #d5dbe7; border-radius: 8px; font: inherit; font-size: 11px; font-weight: 650; white-space: nowrap; cursor: pointer; }
+.nametag-action:hover:not(:disabled) { background: #f5f6fa; border-color: #aeb8cc; }
+.nametag-action:focus-visible { outline: 2px solid #7164e8; outline-offset: 2px; }
+.nametag-action:disabled { color: #69738b; background: #f3f4f7; cursor: not-allowed; }
+.nametag-bulk-actions { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin: 14px 0; padding: 12px 14px; background: #f7f8fb; border: 1px solid #e0e4ec; border-radius: 10px; }
+.nametag-bulk-actions p { margin: 0; color: #59647d; font-size: 12px; line-height: 1.45; }
+.nametag-bulk-buttons { display: flex; align-items: end; flex-shrink: 0; gap: 8px; }
+.nametag-filter-label { display: grid; gap: 4px; color: #59647d; font-size: 10px; font-weight: 650; }
+.nametag-filter-label select { min-width: 155px; min-height: 38px; padding: 7px 30px 7px 10px; color: #252f48; background: #fff; border: 1px solid #d5dbe7; border-radius: 8px; font: inherit; font-size: 12px; font-weight: 400; }
+.nametag-filter-label select:focus-visible { outline: 2px solid #7164e8; outline-offset: 2px; }
+.nametag-refresh { display: inline-grid; width: 38px; min-width: 38px; height: 38px; padding: 0; place-items: center; }
+.nametag-refresh svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.nametag-refresh[aria-busy="true"] svg { animation: nametag-refresh-spin .8s linear infinite; }
+@keyframes nametag-refresh-spin { to { transform: rotate(360deg); } }
+.nametag-queue-all { min-height: 38px; flex-shrink: 0; }
+@media (max-width: 640px) { .nametag-bulk-actions { align-items: stretch; flex-direction: column; } .nametag-bulk-buttons { align-items: stretch; flex-direction: column; } .nametag-filter-label select { width: 100%; } .nametag-refresh { align-self: flex-end; } }
